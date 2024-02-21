@@ -30,15 +30,19 @@ public class NewVisionCode : MonoBehaviour
     {
         DetectedTrue = false; // Reinicia la detección
 
+        if (Object != null)
 
-        Vector3 directionToTarget = Object.position - transform.position;  // Vector hacia el objetivo
-
-        float angleToTarget = Vector3.Angle(transform.forward, directionToTarget); //Calculo del angulo del vector cono a objetivo
-
-        if (angleToTarget < VisionA / 2 && directionToTarget.magnitude < VisionD) // Angulo dentro del angulo del cono y obj a distancia de vision
         {
-            DetectedTrue = true; // El objetivo está detectado
-            detectedPosition = Object.position;
+
+            Vector3 directionToTarget = Object.position - transform.position;  // Vector hacia el objetivo
+
+            float angleToTarget = Vector3.Angle(transform.forward, directionToTarget); //Calculo del angulo del vector cono a objetivo
+
+            if (angleToTarget < VisionA / 2 && directionToTarget.magnitude < VisionD) // Angulo dentro del angulo del cono y obj a distancia de vision
+            {
+                DetectedTrue = true; // El objetivo está detectado
+                detectedPosition = Object.position;
+            }
         }
     }
 
@@ -76,15 +80,22 @@ public class NewVisionCode : MonoBehaviour
 
     // Método para iniciar la persecución
 
-    private void StartPursuit()
+    public void StartPursuit()
     {
         isPursuing = true; // Marca que el guardia está persiguiendo
         pursuitTimer = pursuitDuration;
     }
 
-    // Método para actualizar la persecución
+    public void EndPursuit()
+    {
+        isPursuing = false;
+        transform.position = initialPos;
 
-    private void UpdatePursuit()
+    }
+
+        // Método para actualizar la persecución
+
+        public void UpdatePursuit()
     {
         // Si el tiempo de persecución es mayor que cero
 

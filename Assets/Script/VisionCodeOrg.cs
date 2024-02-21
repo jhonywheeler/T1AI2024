@@ -14,19 +14,19 @@ public class VisionConeOrg : MonoBehaviour
     private void DetectObjects()
     {
         isDetected = false; // Reiniciamos la detección
+        
+            // Obtenemos el vector que apunta desde el agente hacia adelante
+            Vector3 directionToAgent = agent.position - transform.position;
 
-        // Obtenemos el vector que apunta desde el agente hacia adelante
-        Vector3 directionToAgent = agent.position - transform.position;
+            // Calculamos el ángulo entre la dirección al agente y la dirección hacia adelante del cono
+            float angleToAgent = Vector3.Angle(transform.forward, directionToAgent);
 
-        // Calculamos el ángulo entre la dirección al agente y la dirección hacia adelante del cono
-        float angleToAgent = Vector3.Angle(transform.forward, directionToAgent);
-
-        // Si el ángulo está dentro del rango del cono y el agente está dentro de la distancia de visión
-        if (angleToAgent < visionAngle / 2 && directionToAgent.magnitude < visionDistance)
-        {
-            // El agente ha sido detectado
-            isDetected = true;
-        }
+            // Si el ángulo está dentro del rango del cono y el agente está dentro de la distancia de visión
+            if (angleToAgent < visionAngle / 2 && directionToAgent.magnitude < visionDistance)
+            {
+                // El agente ha sido detectado
+                isDetected = true;
+            }
     }
 
     // Método para dibujar el cono de visión y mostrar visualmente la detección

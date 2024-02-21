@@ -135,11 +135,11 @@ GameObject:
   - component: {fileID: 301437192}
   - component: {fileID: 301437191}
   - component: {fileID: 301437190}
-  - component: {fileID: 301437189}
-  - component: {fileID: 301437196}
   - component: {fileID: 301437194}
   - component: {fileID: 301437195}
   - component: {fileID: 301437197}
+  - component: {fileID: 301437198}
+  - component: {fileID: 301437199}
   m_Layer: 0
   m_Name: AgenteInfiltrador
   m_TagString: Infiltrator
@@ -147,36 +147,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &301437189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 301437188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b0506118f9d7b1439e167c375cb5f68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseClickAction:
-    m_Name: Mouse Click
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: bae53bbc-5a55-45a6-82b5-2a6b3ec8deb1
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: c00e9cff-c3f3-460b-962a-e9d971b8e78f
-      m_Path: <Mouse>/leftButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Mouse Click
-      m_Flags: 0
-    m_Flags: 0
-  playerSpeed: 6
 --- !u!136 &301437190
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -319,21 +289,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &301437196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 301437188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9852c107c72b5e04ebaf66b2f062d4ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacleTag: Obstacle
-  avoidanceRadius: 2
-  fleeForce: 5
 --- !u!114 &301437197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,8 +302,68 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleTag: Obstacle
-  avoidanceRadius: 2
-  fleeForce: 5
+  avoidanceRadius: 10
+  fleeForce: 10
+--- !u!114 &301437198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301437188}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0291c26b1b947a044b625e7638996f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseClickAction:
+    m_Name: Mouse Click
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9551c387-cea2-4f8d-9a4d-279591ae33fc
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: e84913e5-5f53-4f62-a141-b0b7c09347f9
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouse Click
+      m_Flags: 0
+    m_Flags: 0
+  playerSpeed: 10
+--- !u!114 &301437199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301437188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6d741d6b2ed494ba32c9032ee9156e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseClickAction:
+    m_Name: Mouse Click
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 08f74e60-6771-417b-aad3-c2ff7e5a5ba4
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 93231d80-8c33-49d3-945d-6855d18cac06
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouse Click
+      m_Flags: 0
+    m_Flags: 0
+  playerSpeed: 10
 --- !u!1 &332377301
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,8 +489,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.2117109
-  m_Center: {x: -0.02649947, y: -0.45989195, z: 0}
+  m_Radius: 1.6400894
+  m_Center: {x: 0.046646994, y: -0.4598919, z: 0}
 --- !u!1 &354222759
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,8 +616,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.3997065
-  m_Center: {x: 0, y: -0.6415885, z: 0}
+  m_Radius: 1.6255342
+  m_Center: {x: -0.021454081, y: -0.6415885, z: -0.010757747}
 --- !u!1 &572961045
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,8 +743,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.049494
-  m_Center: {x: 0, y: 0.54949397, z: 0}
+  m_Radius: 1.5323989
+  m_Center: {x: -0.109049626, y: 0.36586654, z: -0.032775205}
 --- !u!1 &884168772
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,8 +870,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.1253401
-  m_Center: {x: -0.0019973493, y: 0, z: 0}
+  m_Radius: 1.5158498
+  m_Center: {x: 0.0767496, y: 0, z: 0}
 --- !u!1 &1414410473
 GameObject:
   m_ObjectHideFlags: 0

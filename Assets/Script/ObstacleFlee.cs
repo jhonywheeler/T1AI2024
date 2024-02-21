@@ -17,7 +17,7 @@ public class ObstacleFlee : MonoBehaviour
             Vector3 fleeDirection = transform.position - other.transform.position;
 
             fleeDirection.Normalize();
-            GetComponent<Rigidbody>().AddForce(fleeDirection, ForceMode.Acceleration);
+            GetComponent<Rigidbody>().AddForce(fleeDirection * fleeForce, ForceMode.Acceleration); //CAMBIO: Multiplicacion de fleeforce
         }
     }
 }

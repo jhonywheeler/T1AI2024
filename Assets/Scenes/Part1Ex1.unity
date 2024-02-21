@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 211004880}
   - component: {fileID: 211004879}
   - component: {fileID: 211004878}
-  - component: {fileID: 211004877}
   - component: {fileID: 211004885}
   - component: {fileID: 211004884}
   m_Layer: 0
@@ -147,29 +146,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &211004877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 211004876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65f13ed62f967a84a829ea622e412177, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Object: {fileID: 301437193}
-  Guard: {fileID: 211004883}
-  VisionA: 20
-  VisionD: 8
-  movementSpeed: 8
-  initialPos: {x: -0.3, y: 0.54, z: -13.67}
-  pursuitDuration: 5
-  DetectedTrue: 0
-  detectedPosition: {x: 0, y: 0, z: 0}
-  pursuitTimer: 0
-  isPursuing: 0
 --- !u!114 &211004878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,7 +306,7 @@ MonoBehaviour:
   Guard: {fileID: 211004883}
   VisionA: 20
   VisionD: 8
-  movementSpeed: 8
+  movementSpeed: 6
   initialPos: {x: -0.3, y: 0.54, z: -13.67}
   pursuitDuration: 5
 --- !u!1 &301437188
@@ -345,9 +321,10 @@ GameObject:
   - component: {fileID: 301437192}
   - component: {fileID: 301437191}
   - component: {fileID: 301437190}
-  - component: {fileID: 301437189}
   - component: {fileID: 301437194}
   - component: {fileID: 301437195}
+  - component: {fileID: 301437196}
+  - component: {fileID: 301437197}
   m_Layer: 0
   m_Name: AgenteInfiltrador
   m_TagString: Infiltrator
@@ -355,36 +332,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &301437189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 301437188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b0506118f9d7b1439e167c375cb5f68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseClickAction:
-    m_Name: Mouse Click
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: bae53bbc-5a55-45a6-82b5-2a6b3ec8deb1
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: c00e9cff-c3f3-460b-962a-e9d971b8e78f
-      m_Path: <Mouse>/leftButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Mouse Click
-      m_Flags: 0
-    m_Flags: 0
-  playerSpeed: 6
 --- !u!136 &301437190
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -527,6 +474,48 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &301437196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301437188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0291c26b1b947a044b625e7638996f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseClickAction:
+    m_Name: Mouse Click
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: dfd940cc-b4cd-4e51-9140-c6bc92c6fe7b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 5389ef30-585a-4b07-85ef-f8dc89a800fd
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouse Click
+      m_Flags: 0
+    m_Flags: 0
+  playerSpeed: 6
+--- !u!114 &301437197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301437188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f8d38b92c4b304d9027f47b2c85fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &332377301
 GameObject:
   m_ObjectHideFlags: 0
