@@ -9,6 +9,8 @@ public class Node
     // Una que no me sabía yo de Unity C#: Las structs no pueden tener objetos de su propia struct, 
     // pero las classes sí. Probablemente se debe a que las Classes son siempre referencias (punteros) en C#.
     public Node parent;
+     //public float X; // Coordenada X
+    //public float Y; // Coordenada Y
     public Node(string in_Id)
     {
         ID = in_Id;
